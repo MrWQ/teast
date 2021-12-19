@@ -23,7 +23,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, github action!
       - name: Run a 2
-        run: echo whoami
+        run: whoami
         shell: bash
         
  
