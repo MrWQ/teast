@@ -23,8 +23,13 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, github action!
       - name: Run a 2
-        run: whoami
+        run: id
         shell: bash
-        
+      - name: Run a 3
+        run: ifconfig
+        shell: bash
+      - name: Run a 5
+        run: pwd
+        shell: bash
  
 
