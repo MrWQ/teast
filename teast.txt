@@ -1,0 +1,5 @@
+/_config.yml
+/.github/workflows/python-app.yml
+/teast.txt
+/wordlist_from_dir.py
+/README.md
