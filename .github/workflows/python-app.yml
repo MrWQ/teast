@@ -28,4 +28,9 @@ jobs:
     - name: run wordlist
       run: |
         python wordlist_from_dir.py
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: code-coverage-report
+        path: /home/runner/work/teast/teast/teast.txt
 
