@@ -37,8 +37,19 @@ jobs:
 
     - name: make wordlist3
       run: |
-        git commit -m "add" 
+        git config --global user.name "Your Name"
 
     - name: make wordlist4
       run: |
+        git config --global user.email "you@example.com"
+
+
+    - name: make wordlist5
+      run: |
+        git commit -m "add" 
+
+    - name: make wordlist6
+      run: |
         git push
+          
+  
