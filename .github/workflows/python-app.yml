@@ -29,8 +29,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: make wordlist
       run: |
-        python wordlist_from_dir.py
-    - name: git add wordlist
-        run:|
-          git add /home/runner/work/teast/teast/teast.txt && git commit -m "add" && git push
+        python wordlist_from_dir.py && git add /home/runner/work/teast/teast/teast.txt && git commit -m "add" && git push
 
