@@ -1,2 +1,3 @@
+/teast.txt
 /wordlist_from_dir.py
 /README.md
