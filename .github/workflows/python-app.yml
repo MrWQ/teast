@@ -27,28 +27,28 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: make wordlist1
+    - name: make wordlist
       run: |
         python wordlist_from_dir.py 
 
-    - name: make wordlist2
+    - name: git add json
       run: |
-        git add /home/runner/work/teast/teast/teast.txt 
+        git add /home/runner/work/teast/teast/teast*
 
-    - name: make wordlist3
+    - name: git config name
       run: |
         git config --global user.name "Your Name"
 
-    - name: make wordlist4
+    - name: git config mail
       run: |
         git config --global user.email "you@example.com"
 
 
-    - name: make wordlist5
+    - name: git commit 
       run: |
         git commit -m "add" 
 
-    - name: make wordlist6
+    - name: git push
       run: |
         git push
           
