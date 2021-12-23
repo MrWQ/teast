@@ -111,9 +111,9 @@ if __name__ == '__main__':
                         if file_name == '':
                             file_name = 'word_list'
                     file_name_txt = file_name + '.txt'
-                    file_path_txt = os.getcwd() + '\\' + file_name_txt
+                    file_path_txt = os.getcwd() + '/' + file_name_txt
                     file_name_json = file_name + '.json'
-                    file_path_json = os.getcwd() + '\\' + file_name_json
+                    file_path_json = os.getcwd() + '/' + file_name_json
 
                     word_list_file = generate_wordlist_file(root_dir_path)
                     # 增加文件夹的路径列表
