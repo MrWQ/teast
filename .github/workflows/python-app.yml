@@ -14,9 +14,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: sudosubin/git-clone-action@v1.0.1
-    - with:
-        - Repository owner and name: PeiQi0/PeiQi-WIKI-POC
-        - ref: PeiQi
+    - name: checkout
+      uses: actions/checkout@master
+      with:
+        ref: master
+    - name: Git Clone Action
+      with:
+        # Repository owner and name. Ex: sudosubin/git-clone-action
+        repository: PeiQi0/PeiQi-WIKI-POC
+        # Git host platform. Ex: github, gitlab, bitbucket, gitee, or else (git.suckless.org, ...)
+        platform: github
+        # Git branch or tag to checkout.
+        ref: PeiQi
+        # Relative path from current directory, where to clone.
+        path: .
