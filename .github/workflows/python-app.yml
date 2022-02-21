@@ -30,7 +30,9 @@ jobs:
         # Git branch or tag to checkout.
         ref: PeiQi
         # Relative path from current directory, where to clone.
-        path: .
+        # path: 
     - name: run
       run: tree
+    - name: run2
+      run: pwd
   
