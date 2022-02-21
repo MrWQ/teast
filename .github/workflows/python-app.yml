@@ -34,17 +34,15 @@ jobs:
         ref: PeiQi
         # Relative path from current directory, where to clone. 克隆到哪个文件夹
         path: peiqi
-    - name: copy py
-      run: cp wordlist_from_dir.py peiqi/PeiQi_Wiki && cd peiqi/PeiQi_Wiki
 
     - name: tree
       run: tree
 
     - name: make json
-      run: python3 wordlist_from_dir.py
+      run: python3 wordlist_from_dir.py peiqi
     - name: ls
       run: ls
     - name: cat
-      run: cat PeiQi_Wiki.json
+      run: cat peiqi.json
 
   
