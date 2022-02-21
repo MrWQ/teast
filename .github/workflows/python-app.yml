@@ -29,8 +29,8 @@ jobs:
         platform: github
         # Git branch or tag to checkout.
         ref: PeiQi
-        # Relative path from current directory, where to clone.
-        # path: 
+        # Relative path from current directory, where to clone. 克隆到哪个文件夹
+        path: peiqi
     - name: run
       run: tree
     - name: run2
