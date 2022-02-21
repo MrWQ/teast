@@ -39,7 +39,8 @@ jobs:
       run: tree
 
     - name: make json
-      run: python3 wordlist_from_dir.py peiqi/PeiQi
+      # peiqi仓库下的PeiQi_Wiki文件夹
+      run: python3 wordlist_from_dir.py peiqi/PeiQi_Wiki
     - name: ls
       run: ls
     - name: cat
