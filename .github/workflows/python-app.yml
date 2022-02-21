@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Peiqi wiki
+name: vul repo
 
 on:
 #     schedule:
@@ -12,15 +12,18 @@ on:
 #     branches: [ main ]
 
 jobs:
-  build:
+  update_PeiQiWIKI:
     runs-on: ubuntu-latest
     steps:
+    - name: pwd
+      run: pwd
+
     - name: checkout
       uses: actions/checkout@master
       with:
         ref: main
         
-    - name: Git Clone Action
+    - name: Clone PeiQi WIKI
       uses: sudosubin/git-clone-action@v1.0.1
       with:
         # Repository owner and name. Ex: sudosubin/git-clone-action
@@ -31,8 +34,11 @@ jobs:
         ref: PeiQi
         # Relative path from current directory, where to clone. 克隆到哪个文件夹
         path: peiqi
-    - name: run
+    - name: copy py
+      run: copy wordlist_from_dir.py PeiQi_Wiki
+    - name: make json
+      run: PeiQi_Wiki/wordlist_from_dir.py
+    - name: tree
       run: tree
-    - name: run2
-      run: pwd
+
   
