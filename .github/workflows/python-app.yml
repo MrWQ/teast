@@ -48,4 +48,17 @@ jobs:
     - name: cat
       run: cat PeiQi_Wiki.txt
 
+    - name: Verified commit
+      # You may pin to the exact commit or the version.
+      # uses: swinton/commit@bfa68d879ec57187f2c5bf616158433763f05f06
+      uses: swinton/commit@v2.0.0
+      with:
+        # 要提交的文件的换行分隔列表，相对于存储库的根目录。
+        files: PeiQi_Wiki.txt PeiQi_Wiki.json
+        # 包含要提交的文件的基本目录，默认为 GitHub 工作区目录路径, $GITHUB_WORKSPACE.
+        #workspace: # optional, default is
+        # Commit message to be used
+        commit-message: update json
+        # 使用提交更新的参考。此引用必须已经存在。默认为存储库的默认分支 ref.
+        ref: main
   
