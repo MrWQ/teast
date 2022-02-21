@@ -5,11 +5,11 @@ name: Peiqi wiki
 
 on:
 #     schedule:
-#         - cron:  '1 * * * *'
+#         - cron:  '30 0,12,17 * * *'
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
 jobs:
   build:
