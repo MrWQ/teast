@@ -23,7 +23,7 @@ jobs:
       with:
         ref: main
         
-    - name: Clone PeiQi WIKI
+    - name: Clone PeiQi WIKI repo
       uses: sudosubin/git-clone-action@v1.0.1
       with:
         # Repository owner and name. Ex: sudosubin/git-clone-action
@@ -41,9 +41,11 @@ jobs:
     - name: make json
       # peiqi仓库下的PeiQi_Wiki文件夹
       run: python3 wordlist_from_dir.py peiqi/PeiQi_Wiki
+
     - name: ls
       run: ls
+
     - name: cat
-      run: cat peiqi.json
+      run: cat PeiQi_Wiki.txt
 
   
