@@ -5,10 +5,13 @@
 # @File : t_sploitus.py
 # @Python: 3.7.5
 import requests
+import cloudscraper
 
 url = "https://sploitus.com/top"
+scraper = cloudscraper.create_scraper()
+resp = scraper.get(url)
 
-resp = requests.get(url)
+# resp = requests.get(url)
 out = ""
 out = out + str(resp.status_code) + '\n'
 out = out + str(resp.headers) + '\n'
