@@ -9,8 +9,11 @@ import requests
 url = "https://sploitus.com/top"
 
 resp = requests.get(url)
-print(resp.status_code)
-print(resp.headers)
-print(resp.text)
-
+out = ""
+out = out + str(resp.status_code) + '\n'
+out = out + str(resp.headers) + '\n'
+out = out + str(resp.text) + '\n'
+print(out)
+with open("sploitus.log", 'w') as f:
+    f.write(out)
 
